@@ -1,3 +1,5 @@
+/* These are our global styles */
+
 * {
   box-sizing: border-box;
 }
@@ -6,5 +8,7 @@ app-button,
 app-input,
 app-login,
 app-form-group {
-  display: flex;
+  display: block;
 }
+
+@import "styles/typo";
