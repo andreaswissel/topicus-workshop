@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { InputApi, InputType } from '../input/input.component';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { InputApi, InputComponent, InputType } from '../input/input.component';
 
 @Component({
   selector: 'app-form-element',
@@ -8,6 +8,8 @@ import { InputApi, InputType } from '../input/input.component';
 })
 export class FormElementComponent implements OnInit, InputApi {
   uuid: string;
+
+  @ViewChild(InputComponent, { static: false }) input!: InputComponent;
 
   @Input() inputType: InputType = InputType.text;
   @Input() placeholder: string = 'Form Element Placeholder';
@@ -19,4 +21,8 @@ export class FormElementComponent implements OnInit, InputApi {
   }
 
   ngOnInit(): void {}
+
+  get text(): string {
+    return this.input.text;
+  }
 }

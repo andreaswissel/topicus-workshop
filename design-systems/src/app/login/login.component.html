@@ -1,0 +1,22 @@
+<app-card [title]="'Login'">
+  <app-form-layout [columns]="1">
+    <app-form-element
+      [inputType]="InputType.text"
+      [label]="'Username'"
+      [placeholder]="'jane.doe@gmail.com'"
+      #user
+      data-cy-username
+    ></app-form-element>
+    <app-form-element
+      [inputType]="InputType.password"
+      [label]="'Password'"
+      [placeholder]="'secure123'"
+      #pw
+      data-cy-password
+    ></app-form-element>
+  </app-form-layout>
+  <app-button
+    [label]="'Submit'"
+    (click)="login(user.text, pw.text)"
+  ></app-button>
+</app-card>

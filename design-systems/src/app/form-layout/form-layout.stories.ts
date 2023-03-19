@@ -45,6 +45,7 @@ DefaultFormLayout.args = {
   heading: 'Default Form Layout',
   userInput: {
     ...DefaultInput.args,
+    input: undefined,
     label: 'User',
     placeholder: 'Username',
     inputType: InputType.text,
@@ -52,6 +53,7 @@ DefaultFormLayout.args = {
   },
   passwordInput: {
     ...DefaultInput.args,
+    input: undefined,
     label: 'Password',
     placeholder: 'Password',
     inputType: InputType.password,
